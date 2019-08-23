@@ -36,6 +36,19 @@ nav{
    
 }
 
+#nav-text {
+    display: flex;
+    position: relative;
+    left: 200%;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: center;
+    flex-flow: column wrap;
+    width: 80%;
+    height: 80%;
+    z-index: -1;
+}
+
 .nav-list-item{
     display: flex;
     justify-content: space-around;
@@ -45,6 +58,22 @@ nav{
     font-family: 'Major Mono Display', monospace;
     font-size: 3em;
     padding-left: .2em;  
+}
+
+.nav-list-txt {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    vertical-align: central;
+    flex-flow: column wrap;
+    font-family: 'Major Mono Display', monospace;
+    color: #fff;
+    background-color: black;
+    font-size: 2em;
+    padding: .2em;
+    /*opacity: 0;*/
 }
 
 .nav-list-link{
@@ -67,6 +96,16 @@ nav{
     width: 2.5em;
     height: 2.5em;
 }
+
+
+.nav-list-link:hover ~ .nav-list-txt {
+    animation-name: scrollAnimate;
+    animation-duration: 3s;
+    animation-delay: .3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
 
 /*------------\
 |    MAIN     |
@@ -526,4 +565,31 @@ footer {
 .icons-footer{
     margin: 1em 2em;
     width: 2em;
+}
+
+
+/*animações*/
+
+[data-anime] {
+    opacity: 1;
+    transition: .7s;
+}
+
+@keyframes scrollAnimate {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+[data-anime="left"] {
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
