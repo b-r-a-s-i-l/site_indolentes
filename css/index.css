@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
 /*font-family: 'Major Mono Display', monospace;*/
 @import url('https://fonts.googleapis.com/css?family=Special+Elite');
@@ -64,8 +64,8 @@ nav{
     align-content: center;
     flex-flow: column wrap;
     padding-left: 1em;
-    width: 3.5em;
-    height: 3.5em;
+    width: 2.5em;
+    height: 2.5em;
 }
 
 /*------------\
@@ -84,8 +84,8 @@ header{
 #background-main{
     display: flex;
     position: absolute;
-    background: url('../img/background-felipe.jpg');
-    background-position: center top;
+    background: url('../img/background-main.jpg');
+    background-position: center center;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -106,7 +106,7 @@ header{
     font-family: 'Major Mono Display', monospace;
     font-size: 5em;
     text-shadow: 13px 13px 50px black;
-    color: #ffffff;
+    color: #111;
 }
 
 #main{
@@ -187,56 +187,102 @@ header{
     position: absolute;
     display: block;
 }
-#hannah{width: 10em; height: 26em; left: 13em; top: 10em;}
-#ramiro{width: 13em; height: 29em; left: 27em; top: 7em;}
-#esther{width: 10em; height: 26em; left: 44em; top: 10em;}
-#felipe{width: 17em; height: 26em; left: 63em; top: 10em;}
+#esther {
+    width: 17em;
+    height: 30em;
+    left: 8em;
+    top: 2em;
+}
+#law {
+    width: 9em;
+    height: 29em;
+    left: 27em;
+    top: 2em;
+}
+#marcos {
+    width: 13em;
+    height: 29em;
+    left: 37em;
+    top: 2em;
+}
+#hannah {
+    width: 12em;
+    height: 26em;
+    left: 51em;
+    top: 5em;
+}
+#felipe {
+    width: 17em;
+    height: 26em;
+    left: 63em;
+    top: 7em;
+}
+/*.member{
+    background-color: brown;
+    opacity: .4;
+}*/
 
-#hannah:hover ~ #background-band{
+#esther:hover ~ #background-band {
     display: flex;
-    background: url('../img/band-hannah.jpg');
-    background-position: center top;
+    background: url('../img/band_esther.jpg');
+    background-position: center center;
     background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     transition: .5s;
 }
 
-#ramiro:hover ~ #background-band{
+#law:hover ~ #background-band {
     display: flex;
-    background: url('../img/band-ramiro.jpg');
-    background-position: center top;
+    background: url('../img/band_law.jpg');
+    background-position: center center;
     background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     transition: .5s;
 }
 
-#esther:hover ~ #background-band{
+#marcos:hover ~ #background-band {
     display: flex;
-    background: url('../img/band-eshter.jpg');
-    background-position: center top;
+    background: url('../img/band_marcos.jpg');
+    background-position: center center;
     background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     transition: .5s;
 }
 
-#felipe:hover ~ #background-band{
+#hannah:hover ~ #background-band {
     display: flex;
-    background: url('../img/band-felipe.jpg');
-    background-position: center top;
+    background: url('../img/band_hannah.jpg');
+    background-position: center center;
     background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     transition: .5s;
 }
 
-#background-band{
+#felipe:hover ~ #background-band {
+    display: flex;
+    background: url('../img/band_felipe.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+#background-band {
     display: flex;
     background: url('../img/band.jpg');
-    background-position: center top;
+    background-position: center center;
     background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
 }
@@ -306,7 +352,7 @@ header{
     color: #000000;
 }
 
-#streaming-btn{
+#streaming-btn {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -314,7 +360,7 @@ header{
     flex-flow: row wrap;
     width: 80%;
     height: 40%;
-    background-color: #607D8B;
+    background-color: rgba(34, 34, 34, .8);
 }
 
 .icons{
@@ -324,7 +370,7 @@ header{
 
 #buttons{
     display: flex;
-    justify-content: stretch;
+    justify-content: center;
     align-items: center;
     align-content: center;
     flex-flow: column wrap;
@@ -332,8 +378,8 @@ header{
     height: 30%;
 }
 
-#download-btn{
-    background-color: rgba(96, 125, 139, .8);
+#download-btn {
+    background-color: rgba(34, 34, 34, .8);
     border: none;
     margin: 1em 0;
     width: 40%;
@@ -342,8 +388,8 @@ header{
     color: #ffffff;
 }
 
-#buy-btn{
-    background-color: rgba(96, 125, 139, .8);
+#buy-btn {
+    background-color: rgba(34, 34, 34, .8);
     border: none;
     margin: 1em 0;
     width: 40%;
@@ -375,21 +421,25 @@ header{
     z-index: -1;
 }
 
-form{
+form {
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-start;
     align-items: flex-start;
     align-content: center;
+    width: 80%;
+    height: 90%;
     margin-top: 2em;
     margin-left: 10em;
+    /*background-color: chocolate;*/
 }
 
 form label{
-    font-size: 1.5em;
+    font-size: 1em;
     font-family: 'Special Elite', monospace;
-    color: #ffffff;
-    margin: .5em 0;
+    color: #111;
+    margin-top: .5em;
+    padding: 0;
 }
 
 #mensage{
@@ -398,7 +448,7 @@ form label{
     font-family: 'Courier New', Courier, monospace;
     color: #ffffff;
     margin-top: .5em;
-    width: 150%;
+    width: 60%;
     height: 55%;
   
 }
@@ -408,14 +458,18 @@ form label{
     background-color: rgba(0, 0, 0, 0.8);
     padding: .5em 0;
     margin-top: .5em;
-    width: 150%;
-    height: 35%;
+    width: 60%;
     font-family: 'Special Elite', monospace;
     color: #ffffff;
 }
+#email, #name {
+    height: 2%;
+}
 
-
-footer{
+#send {
+    height: 5%;
+}
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
